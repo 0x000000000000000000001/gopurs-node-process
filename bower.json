@@ -21,5 +21,11 @@
     "purescript-posix-types": "^6.0.0",
     "purescript-prelude": "^6.0.0",
     "purescript-unsafe-coerce": "^6.0.0"
+  },
+  "resolutions": {
+    "purescript-node-streams": "9.0.0",
+    "purescript-node-fs": "9.1.0",
+    "purescript-node-buffer": "9.0.0",
+    "purescript-node-net": "5.1.0"
   }
 }
