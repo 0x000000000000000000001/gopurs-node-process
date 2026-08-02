@@ -1,13 +1,11 @@
 package Process
 
 import (
-	"gopurs/output/gopurs_runtime"
 	"os"
 )
 
-func ExitImpl(code interface{}) interface{} {
-	c := int(code.(gopurs_runtime.Value).IntVal)
-	os.Exit(c)
+func ExitImpl(code int64) interface{} {
+	os.Exit(int(code))
 	return nil
 }
 
