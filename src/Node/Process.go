@@ -2,6 +2,7 @@ package Process
 
 import (
 	"os"
+	"strings"
 )
 
 func ExitImpl(code int64) interface{} {
@@ -17,12 +18,15 @@ func AbortImpl(_ interface{}) interface{} {
 	panic("Not implemented: abortImpl")
 }
 
-func Argv(_ interface{}) interface{} {
-	panic("Not implemented: argv")
+func Argv(_ interface{}) []string {
+	return os.Args
 }
 
-func Argv0(_ interface{}) interface{} {
-	panic("Not implemented: argv0")
+func Argv0(_ interface{}) string {
+	if len(os.Args) > 0 {
+		return os.Args[0]
+	}
+	return ""
 }
 
 func ChannelRefImpl(_ interface{}) interface{} {
@@ -66,19 +70,31 @@ func DisconnectImpl(_ interface{}) interface{} {
 }
 
 func GetEnv(_ interface{}) interface{} {
-	panic("Not implemented: getEnv")
+	env := make(map[string]interface{})
+	for _, e := range os.Environ() {
+		parts := strings.SplitN(e, "=", 2)
+		if len(parts) == 2 {
+			env[parts[0]] = parts[1]
+		}
+	}
+	return env
 }
 
 func UnsafeGetEnv(_ interface{}) interface{} {
-	panic("Not implemented: unsafeGetEnv")
+	return GetEnv(nil)
 }
 
-func SetEnvImpl(_ interface{}, _ interface{}) interface{} {
-	panic("Not implemented: setEnvImpl")
+func SetEnvImpl(keyVal interface{}, valVal interface{}) interface{} {
+	key := keyVal.(string)
+	val := valVal.(string)
+	os.Setenv(key, val)
+	return nil
 }
 
-func UnsetEnvImpl(_ interface{}) interface{} {
-	panic("Not implemented: unsetEnvImpl")
+func UnsetEnvImpl(keyVal interface{}) interface{} {
+	key := keyVal.(string)
+	os.Unsetenv(key)
+	return nil
 }
 
 func ExecArgv(_ interface{}) interface{} {
