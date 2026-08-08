@@ -3,6 +3,7 @@ package Process
 import (
 	"os"
 	"strings"
+	"runtime"
 )
 
 func ExitImpl(code int64) interface{} {
@@ -57,8 +58,12 @@ func CpuUsageDiffImpl(_ interface{}) interface{} {
 	panic("Not implemented: cpuUsageDiffImpl")
 }
 
-func Cwd(_ interface{}) interface{} {
-	panic("Not implemented: cwd")
+func Cwd(_ interface{}) string {
+	dir, err := os.Getwd()
+	if err != nil {
+		panic(err)
+	}
+	return dir
 }
 
 func DebugPort(_ interface{}) interface{} {
@@ -101,8 +106,12 @@ func ExecArgv(_ interface{}) interface{} {
 	panic("Not implemented: execArgv")
 }
 
-func ExecPath(_ interface{}) interface{} {
-	panic("Not implemented: execPath")
+func ExecPath(_ interface{}) string {
+	exe, err := os.Executable()
+	if err != nil {
+		panic(err)
+	}
+	return exe
 }
 
 func Exit(_ interface{}) interface{} {
@@ -157,13 +166,9 @@ func NextTickCbImpl(_ interface{}, _ interface{}) interface{} {
 	panic("Not implemented: nextTickCbImpl")
 }
 
-func Pid(_ interface{}) interface{} {
-	panic("Not implemented: pid")
-}
+var Pid = int64(os.Getpid())
 
-func PlatformStr(_ interface{}) interface{} {
-	panic("Not implemented: platformStr")
-}
+var PlatformStr = runtime.GOOS
 
 func Ppid(_ interface{}) interface{} {
 	panic("Not implemented: ppid")
@@ -233,7 +238,4 @@ func Uptime(_ interface{}) interface{} {
 	panic("Not implemented: uptime")
 }
 
-func Version(_ interface{}) interface{} {
-	panic("Not implemented: version")
-}
-
+var Version = runtime.Version()
