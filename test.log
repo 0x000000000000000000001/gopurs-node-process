@@ -1,0 +1,435 @@
+=== Building project with spago ===
+Reading Spago workspace configuration...
+
+✓ Selecting package to build: gopurs-node-process
+
+Downloading dependencies...
+Building...
+[  1 of 285] Compiling Type.Function
+[  2 of 285] Compiling Type.Row
+[  3 of 285] Compiling Type.Proxy
+[  4 of 285] Compiling Type.Equality
+[  5 of 285] Compiling Spago.Generated.BuildInfo
+[  6 of 285] Compiling Partial
+[  7 of 285] Compiling Record.Unsafe
+[  8 of 285] Compiling Unsafe.Coerce
+[  9 of 285] Compiling Data.Void
+[ 10 of 285] Compiling Data.Traversable.Accum
+[ 11 of 285] Compiling Data.Unit
+[ 12 of 285] Compiling Data.String.Unsafe
+[ 13 of 285] Compiling Data.NaturalTransformation
+[ 14 of 285] Compiling Data.Int.Bits
+[ 16 of 285] Compiling Data.Boolean
+[ 15 of 285] Compiling Data.ArrayBuffer.Types
+[ 17 of 285] Compiling Control.Semigroupoid
+[ 18 of 285] Compiling Data.Function.Uncurried
+[ 19 of 285] Compiling Control.Lazy
+[ 20 of 285] Compiling Safe.Coerce
+[ 21 of 285] Compiling Data.Exists
+[ 22 of 285] Compiling Type.Data.Boolean
+[ 23 of 285] Compiling Partial.Unsafe
+[ 24 of 285] Compiling Data.Symbol
+[ 25 of 285] Compiling Control.Category
+[ 27 of 285] Compiling Data.HeytingAlgebra
+[ 26 of 285] Compiling Data.Semiring
+[ 28 of 285] Compiling Data.Semigroup
+[ 29 of 285] Compiling Data.Show
+[ 30 of 285] Compiling Data.Ring
+[ 31 of 285] Compiling Data.Generic.Rep
+[ 33 of 285] Compiling Data.BooleanAlgebra
+[ 32 of 285] Compiling Data.Eq
+[ 34 of 285] Compiling Data.CommutativeRing
+[ 35 of 285] Compiling Data.Ordering
+[ 36 of 285] Compiling Data.EuclideanRing
+[ 37 of 285] Compiling Data.Ord
+[ 38 of 285] Compiling Type.Data.Ordering
+[ 39 of 285] Compiling Data.DivisionRing
+[ 40 of 285] Compiling Data.Field
+[ 41 of 285] Compiling Type.Data.Symbol
+[ 42 of 285] Compiling Type.RowList
+[ 43 of 285] Compiling Type.Prelude
+[ 44 of 285] Compiling Type.Row.Homogeneous
+[ 46 of 285] Compiling Data.Reflectable
+[ 47 of 285] Compiling Data.Bounded
+[ 45 of 285] Compiling Data.Function
+[ 48 of 285] Compiling Data.Monoid
+[ 49 of 285] Compiling Data.Functor
+[ 51 of 285] Compiling Control.Alt
+[ 50 of 285] Compiling Control.Apply
+[ 52 of 285] Compiling Control.Extend
+[ 53 of 285] Compiling Data.Monoid.Generic
+[ 54 of 285] Compiling Control.Plus
+[ 55 of 285] Compiling Data.Bounded.Generic
+[ 56 of 285] Compiling Control.Comonad
+[ 57 of 285] Compiling Control.Applicative
+[ 59 of 285] Compiling Control.Alternative
+[ 58 of 285] Compiling Control.Bind
+[ 60 of 285] Compiling Control.Monad
+[ 62 of 285] Compiling Prelude
+[ 61 of 285] Compiling Control.MonadPlus
+[ 63 of 285] Compiling Data.Semigroup.Generic
+[ 64 of 285] Compiling Data.Monoid.Additive
+[ 65 of 285] Compiling Data.Monoid.Disj
+[ 66 of 285] Compiling Data.Traversable.Accum.Internal
+[ 67 of 285] Compiling Control.Monad.Reader.Class
+[ 68 of 285] Compiling Data.Number.Format
+[ 69 of 285] Compiling Control.Monad.Trans.Class
+[ 70 of 285] Compiling Data.Show.Generic
+[ 71 of 285] Compiling Data.Ring.Generic
+[ 72 of 285] Compiling Data.Semiring.Generic
+[ 73 of 285] Compiling Data.Monoid.Dual
+[ 75 of 285] Compiling Node.Buffer.Types
+[ 74 of 285] Compiling Data.Monoid.Conj
+[ 76 of 285] Compiling Data.Monoid.Endo
+[ 77 of 285] Compiling Data.Monoid.Multiplicative
+[ 78 of 285] Compiling Control.Monad.Cont.Class
+[ 79 of 285] Compiling Data.Semigroup.Last
+[ 81 of 285] Compiling Control.Monad.Gen.Class
+[ 80 of 285] Compiling Data.HeytingAlgebra.Generic
+[ 82 of 285] Compiling Effect
+[ 83 of 285] Compiling Data.Semigroup.First
+[ 84 of 285] Compiling Data.Ord.Generic
+[ 86 of 285] Compiling Node.Encoding
+[ 85 of 285] Compiling Data.Eq.Generic
+[ 87 of 285] Compiling Effect.Class
+[ 89 of 285] Compiling Effect.Ref
+[ 88 of 285] Compiling Effect.Console
+[ 90 of 285] Compiling Node.Buffer.Constants
+[ 92 of 285] Compiling Effect.Unsafe
+[ 91 of 285] Compiling Effect.Uncurried
+[ 93 of 285] Compiling Data.Newtype
+[ 94 of 285] Compiling Effect.Class.Console
+[ 95 of 285] Compiling Test.Assert
+[ 96 of 285] Compiling Data.Ord.Max
+[ 97 of 285] Compiling Data.String.Pattern
+[ 98 of 285] Compiling Data.Monoid.Alternate
+[ 99 of 285] Compiling Data.Posix
+[100 of 285] Compiling Data.Functor.App
+[101 of 285] Compiling Data.Ord.Min
+[102 of 285] Compiling Data.Ord.Down
+[103 of 285] Compiling Data.Profunctor
+[104 of 285] Compiling Data.Time.Duration
+[105 of 285] Compiling Data.String.Common
+[106 of 285] Compiling Data.Profunctor.Closed
+[107 of 285] Compiling Data.Functor.Invariant
+[108 of 285] Compiling Data.Functor.Compose
+[109 of 285] Compiling Data.Profunctor.Split
+[110 of 285] Compiling Data.Maybe
+[111 of 285] Compiling Data.Const
+[112 of 285] Compiling Data.Identity
+[114 of 285] Compiling Data.Profunctor.Join
+[113 of 285] Compiling Data.Tuple
+[115 of 285] Compiling Data.Functor.Contravariant
+[116 of 285] Compiling Data.Op
+[117 of 285] Compiling Data.Predicate
+[118 of 285] Compiling Data.Comparison
+[119 of 285] Compiling Data.Equivalence
+[120 of 285] Compiling Node.Platform
+[121 of 285] Compiling Data.Either
+[122 of 285] Compiling Data.Number
+[123 of 285] Compiling Data.Maybe.Last
+[124 of 285] Compiling Data.Maybe.First
+[125 of 285] Compiling Data.Posix.Signal
+[126 of 285] Compiling Data.String.CodeUnits
+[127 of 285] Compiling Data.Int
+[128 of 285] Compiling Data.Number.Approximate
+[130 of 285] Compiling Data.Divide
+[131 of 285] Compiling Control.Monad.Writer.Class
+[132 of 285] Compiling Data.Distributive
+[133 of 285] Compiling Data.Profunctor.Costrong
+[129 of 285] Compiling Data.Tuple.Nested
+[134 of 285] Compiling Data.Profunctor.Strong
+[135 of 285] Compiling Control.Monad.State.Class
+[136 of 285] Compiling Data.Divisible
+[137 of 285] Compiling Data.Decide
+[138 of 285] Compiling Data.Bifunctor
+[139 of 285] Compiling Data.Profunctor.Choice
+[140 of 285] Compiling Data.Either.Nested
+[141 of 285] Compiling Data.Profunctor.Cochoice
+[142 of 285] Compiling Effect.Exception
+[143 of 285] Compiling Data.Either.Inject
+[144 of 285] Compiling Effect.Exception.Unsafe
+[145 of 285] Compiling Control.Monad.Error.Class
+[146 of 285] Compiling Data.Functor.Coproduct
+[147 of 285] Compiling Control.Biapply
+[148 of 285] Compiling Data.Functor.Product
+[150 of 285] Compiling Data.Profunctor.Star
+[149 of 285] Compiling Data.Functor.Costar
+[151 of 285] Compiling Control.Monad.Rec.Class
+[152 of 285] Compiling Data.Decidable
+[153 of 285] Compiling Control.Biapplicative
+[154 of 285] Compiling Data.Bifunctor.Join
+[155 of 285] Compiling Data.Functor.Flip
+[156 of 285] Compiling Data.Functor.Product2
+[157 of 285] Compiling Data.Functor.Joker
+[158 of 285] Compiling Data.Functor.Clown
+[159 of 285] Compiling Data.Functor.Coproduct.Inject
+[160 of 285] Compiling Data.Functor.Coproduct.Nested
+[161 of 285] Compiling Data.FunctorWithIndex
+[162 of 285] Compiling Data.Functor.Product.Nested
+[163 of 285] Compiling Data.Foldable
+[164 of 285] Compiling Control.Monad.ST.Internal
+[165 of 285] Compiling Control.Monad.ST.Ref
+[166 of 285] Compiling Control.Monad.ST
+[167 of 285] Compiling Control.Monad.ST.Uncurried
+[168 of 285] Compiling Control.Monad.ST.Global
+[169 of 285] Compiling Foreign.Object.ST
+[170 of 285] Compiling Control.Monad.ST.Class
+[171 of 285] Compiling Control.Monad.Cont.Trans
+[172 of 285] Compiling Control.Monad.Maybe.Trans
+[173 of 285] Compiling Control.Monad.State.Trans
+[174 of 285] Compiling Control.Monad.Reader.Trans
+[175 of 285] Compiling Control.Monad.Writer.Trans
+[176 of 285] Compiling Control.Monad.RWS.Trans
+[177 of 285] Compiling Control.Monad.Except.Trans
+[178 of 285] Compiling Data.Array.ST
+[179 of 285] Compiling Control.Monad.Cont
+[180 of 285] Compiling Data.Array.ST.Partial
+[181 of 285] Compiling Data.Array.ST.Iterator
+[182 of 285] Compiling Control.Monad.Reader
+[183 of 285] Compiling Control.Monad.Writer
+[184 of 285] Compiling Control.Monad.State
+[185 of 285] Compiling Control.Monad.Except
+[186 of 285] Compiling Control.Parallel.Class
+[187 of 285] Compiling Data.Bifoldable
+[188 of 285] Compiling Data.Semigroup.Foldable
+[189 of 285] Compiling Data.Traversable
+[190 of 285] Compiling Data.FoldableWithIndex
+[191 of 285] Compiling Control.Monad.RWS
+[192 of 285] Compiling Data.Semigroup.Traversable
+[193 of 285] Compiling Control.Parallel
+[194 of 285] Compiling Control.Monad.Identity.Trans
+[195 of 285] Compiling Data.Bitraversable
+[196 of 285] Compiling Effect.Aff
+[197 of 285] Compiling Data.Unfoldable1
+[198 of 285] Compiling Control.Comonad.Trans.Class
+[199 of 285] Compiling Control.Comonad.Store.Trans
+[200 of 285] Compiling Control.Comonad.Traced.Trans
+[201 of 285] Compiling Data.TraversableWithIndex
+[202 of 285] Compiling Data.Unfoldable
+[203 of 285] Compiling Control.Monad.Gen
+[204 of 285] Compiling Data.Enum
+[205 of 285] Compiling Data.Time.Duration.Gen
+[206 of 285] Compiling Effect.Aff.Compat
+[207 of 285] Compiling Data.Lazy
+[208 of 285] Compiling Data.Array.NonEmpty.Internal
+[210 of 285] Compiling Control.Comonad.Env.Trans
+[209 of 285] Compiling Data.NonEmpty
+[211 of 285] Compiling Data.Array
+[212 of 285] Compiling Data.Date.Component
+[213 of 285] Compiling Data.Enum.Generic
+[214 of 285] Compiling Data.Char
+[215 of 285] Compiling Data.Time.Component
+[216 of 285] Compiling Control.Comonad.Store.Class
+[217 of 285] Compiling Control.Monad.List.Trans
+[218 of 285] Compiling Control.Comonad.Store
+[219 of 285] Compiling Data.Char.Gen
+[220 of 285] Compiling Data.List.Types
+[221 of 285] Compiling Data.Enum.Gen
+[222 of 285] Compiling Data.List.Lazy.Types
+[223 of 285] Compiling Control.Monad.Gen.Common
+[224 of 285] Compiling Data.Time
+[225 of 285] Compiling Control.Comonad.Env.Class
+[226 of 285] Compiling Data.Time.Component.Gen
+[227 of 285] Compiling Data.String.Gen
+[228 of 285] Compiling Control.Comonad.Env
+[229 of 285] Compiling Data.Date.Component.Gen
+[230 of 285] Compiling Data.Date
+[231 of 285] Compiling Control.Comonad.Traced.Class
+[232 of 285] Compiling Data.Time.Gen
+[233 of 285] Compiling Control.Comonad.Traced
+[235 of 285] Compiling Data.Date.Gen
+[234 of 285] Compiling Data.DateTime
+[237 of 285] Compiling Foreign.Object
+[238 of 285] Compiling Data.String.CodePoints
+[239 of 285] Compiling Data.Array.Partial
+[236 of 285] Compiling Data.Array.NonEmpty
+[240 of 285] Compiling Data.List.Internal
+[241 of 285] Compiling Data.DateTime.Gen
+[242 of 285] Compiling Data.DateTime.Instant
+[243 of 285] Compiling Effect.Aff.Class
+[244 of 285] Compiling Data.String
+[245 of 285] Compiling Data.String.NonEmpty.Internal
+[246 of 285] Compiling Data.String.Regex.Flags
+[247 of 285] Compiling Data.String.CaseInsensitive
+[249 of 285] Compiling Data.List
+[248 of 285] Compiling Data.List.Lazy
+[250 of 285] Compiling Foreign.Object.ST.Unsafe
+[251 of 285] Compiling Foreign.Object.Unsafe
+[253 of 285] Compiling Data.String.NonEmpty.CodePoints
+[252 of 285] Compiling Data.String.Regex
+[254 of 285] Compiling Data.String.NonEmpty.CodeUnits
+[255 of 285] Compiling Data.String.Regex.Unsafe
+[256 of 285] Compiling Data.String.NonEmpty
+[257 of 285] Compiling Data.String.NonEmpty.CaseInsensitive
+[259 of 285] Compiling Data.List.ZipList
+[258 of 285] Compiling Data.List.Lazy.NonEmpty
+[261 of 285] Compiling Foreign.Object.Gen
+[260 of 285] Compiling Data.List.NonEmpty
+[262 of 285] Compiling Data.List.Partial
+[263 of 285] Compiling Data.Map.Internal
+[264 of 285] Compiling Foreign
+[265 of 285] Compiling Data.Nullable
+[266 of 285] Compiling Foreign.Index
+[267 of 285] Compiling Foreign.Keys
+[269 of 285] Compiling Node.Symbol
+[268 of 285] Compiling Node.Buffer.Immutable
+[270 of 285] Compiling Node.EventEmitter
+[271 of 285] Compiling Node.Buffer.Class
+[272 of 285] Compiling Node.Buffer
+[273 of 285] Compiling Node.EventEmitter.UtilTypes
+[274 of 285] Compiling Node.Buffer.ST
+[275 of 285] Compiling Node.Stream
+[276 of 285] Compiling Data.Set
+[277 of 285] Compiling Node.Stream.Aff
+[278 of 285] Compiling Node.Process
+[279 of 285] Compiling Test.Main
+[280 of 285] Compiling Data.Set.NonEmpty
+[281 of 285] Compiling Data.Map
+[283 of 285] Compiling Data.Map.Gen
+[282 of 285] Compiling Data.Interval.Duration
+[285 of 285] Compiling Data.Interval
+[284 of 285] Compiling Data.Interval.Duration.Iso
+           Src   Lib   All
+Warnings     0     0     0
+Errors       0     0     0
+
+✓ Build succeeded.
+
+=== Generating Go code with gopurs ===
+=== Compiling and running Go test binary ===
+panic: interface conversion: interface {} is gopurs_runtime.Value, not string
+
+goroutine 1 [running]:
+gopurs/output/Node%2eProcess.SetEnvImpl(...)
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Node.Process/Node_Process_ffi.go:96
+gopurs/output/Node%2eProcess.init.func39({0x10?, 0x102de15c0?, 0x200000000?}, {0x102f04420?, 0x1518474b8838?, 0x102ccc014?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Node.Process/Node_Process_ffi.go:499 +0x38
+gopurs/output/gopurs_runtime.UncurriedApp2({0x0, 0x0, 0x1518474b8888}, {0x102c8f1b4?, 0x10?, 0x151847359120?}, {0x102e25301?, 0x1518473590f0?, 0x151847359130?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:554 +0x4c
+gopurs/output/Test%2eMain.Get_main.func1.1.1.1.1.1.1.2.1.1.1.1.1({0x10?, 0x102de6a40?, 0x1518474b88f8?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Test.Main/Test_Main.go:176 +0x9c
+gopurs/output/gopurs_runtime.Apply({0x0, 0x0, 0x0}, {0x102f074e0?, 0x102ef8108?, 0x151847359110?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:55 +0x64
+gopurs/output/Effect.BindE(0x102ccf701?, 0x1518474b89e8, {0x1518474b8a38?, 0x102ccbf90?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:10 +0x30
+gopurs/output/Effect.init.func1({0x10?, 0x102de6a40?, 0x102e09918?}, {0x102f042e0?, 0x1518474b8ad8?, 0x102e09920?}, {0x102ef8108?, 0x20?, 0x151847359100?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x20?, 0x102ded360?, 0x151847359100?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x1518474b8b48, 0x0, 0x0}, {0x102dfe240?, 0x1518473541c8?, 0x151847359100?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.2.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:60 +0x64
+gopurs/output/Effect.BindE(0x0?, 0x1518474b8bb8, {0x102e09910?, 0x102e09ed0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:11 +0x50
+gopurs/output/Effect.init.func1({0x10?, 0x102de6a40?, 0x1518473ec360?}, {0x0?, 0x1518474b8ca8?, 0x102e09910?}, {0x102ef8108?, 0x20?, 0x1518473590d0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x20?, 0x102ded360?, 0x1518473590d0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x1518474b8d18, 0x0, 0x0}, {0x102dfe240?, 0x1518473541b0?, 0x1518473590d0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.2.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:60 +0x64
+gopurs/output/Effect.BindE(0x102ccf701?, 0x1518474b8d88, {0x1518474b8dd8?, 0x102ccbdd4?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:11 +0x50
+gopurs/output/Effect.init.func1({0x10?, 0x102de6a40?, 0x102e0a0b8?}, {0x0?, 0x1518474b8e78?, 0x102e09908?}, {0x102ef8108?, 0x20?, 0x151847359080?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x20?, 0x102ded360?, 0x151847359080?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x1518474b8ee8, 0x0, 0x0}, {0x102dfe240?, 0x151847354198?, 0x151847359080?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.2.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:60 +0x64
+gopurs/output/Effect.BindE(0x3004b8f01?, 0x1518474b8f58, {0x1518474b8f78?, 0x102ccbd24?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:11 +0x50
+gopurs/output/Effect.init.func1({0x10?, 0x102de6a40?, 0x1518473ec330?}, {0x102f042e0?, 0x1518474b9048?, 0x102e09900?}, {0x102ef8108?, 0x20?, 0x151847359050?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x20?, 0x102ded360?, 0x151847359050?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x1518474b90b8, 0x0, 0x0}, {0x102dfe240?, 0x151847354138?, 0x151847359050?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.2.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:60 +0x64
+gopurs/output/Effect.BindE(0x102ccf701?, 0x1518474b9128, {0x1518474b9178?, 0x102ccbc84?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:11 +0x50
+gopurs/output/Effect.init.func1({0x10?, 0x102de6a40?, 0x102e0a060?}, {0x0?, 0x1518474b9218?, 0x102e098f8?}, {0x102ef8108?, 0x20?, 0x151847359010?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x20?, 0x102ded360?, 0x151847359010?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x1518474b9288, 0x0, 0x0}, {0x102dfe240?, 0x1518473540f0?, 0x151847359010?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.2.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:60 +0x64
+gopurs/output/Effect.BindE(0x28?, 0x1518474b92f8, {0x1?, 0x1000000000001?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:11 +0x50
+gopurs/output/Effect.init.func1({0x10?, 0x102de6a40?, 0x1518473ec300?}, {0x1518473ec300?, 0x1518474b93e8?, 0x102e098f0?}, {0x102ef8108?, 0x20?, 0x151847358fe0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x20?, 0x102ded360?, 0x151847358fe0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x1518474b9458, 0x0, 0x0}, {0x102dfe240?, 0x1518473540d8?, 0x151847358fe0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.2.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:60 +0x64
+gopurs/output/Effect.BindE(0x0?, 0x1518474b94c8, {0x102e098e8?, 0x102e09ed0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:11 +0x50
+gopurs/output/Effect.init.func1({0x10?, 0x102de6a40?, 0x1518473ec2d0?}, {0x0?, 0x1518474b95b8?, 0x102e098e8?}, {0x102ef8108?, 0x20?, 0x151847358fb0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x20?, 0x102ded360?, 0x151847358fb0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x1518474b9628, 0x0, 0x0}, {0x102dfe240?, 0x1518473540c0?, 0x151847358fb0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.2.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:60 +0x64
+gopurs/output/Effect.BindE(0x102ccf701?, 0x1518474b9698, {0x1518474b96e8?, 0x102ccb9c4?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:11 +0x50
+gopurs/output/Effect.init.func1({0x10?, 0x102de6a40?, 0x102e0a040?}, {0x0?, 0x1518474b9788?, 0x102e098e0?}, {0x102ef8108?, 0x20?, 0x151847358f60?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x20?, 0x102ded360?, 0x151847358f60?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x1518474b97f8, 0x0, 0x0}, {0x102dfe240?, 0x1518473540a8?, 0x151847358f60?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.2.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:60 +0x64
+gopurs/output/Effect.BindE(0x0?, 0x1518474b9868, {0x102e098d8?, 0x102e09ed0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:11 +0x50
+gopurs/output/Effect.init.func1({0x10?, 0x102de6a40?, 0x1518473ec2a0?}, {0x0?, 0x1518473e6958?, 0x102e098d8?}, {0x102ef8108?, 0x20?, 0x151847358f30?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x20?, 0x102ded360?, 0x151847358f30?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x1518473e69c8, 0x0, 0x0}, {0x102dfe240?, 0x151847354090?, 0x151847358f30?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.2.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:60 +0x64
+gopurs/output/Effect.BindE(0x102ccf701?, 0x1518473e6a38, {0x1518473e6a88?, 0x102ccb7f4?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:11 +0x50
+gopurs/output/Effect.init.func1({0x10?, 0x102de6a40?, 0x102e0a020?}, {0x0?, 0x1518473e6b28?, 0x102e098d0?}, {0x102ef8108?, 0x20?, 0x151847358ee0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x20?, 0x102ded360?, 0x151847358ee0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x1518473e6b98, 0x0, 0x0}, {0x102dfe240?, 0x151847354078?, 0x151847358ee0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.2.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:60 +0x64
+gopurs/output/Effect.BindE(0x0?, 0x1518473e6c08, {0x0?, 0x1518473ec210?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:11 +0x50
+gopurs/output/Effect.init.func1({0x10?, 0x102de6a40?, 0x1518473ec210?}, {0x2?, 0x1518473e6cf8?, 0x102e098c8?}, {0x102ef8108?, 0x20?, 0x151847358eb0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x20?, 0x102ded360?, 0x151847358eb0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x1518473e6d68, 0x0, 0x0}, {0x102dfe240?, 0x151847354018?, 0x151847358eb0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+gopurs/output/Effect.init.func1.2.1({0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:60 +0x64
+gopurs/output/Effect.BindE(0x0?, 0x1518473e6dd8, {0x102c446f0?, 0x151847492000?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:11 +0x50
+gopurs/output/Effect.init.func1({0x4?, 0x102e0a058?, 0x102e0a058?}, {0x102c446b8?, 0x102e098c0?, 0x102e098c0?}, {0x1518473e6ea8?, 0x102ccb5b0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Effect/Effect_ffi.go:64 +0x68
+gopurs/output/gopurs_runtime.Apply2.func1({0x102c44700?, 0x102e4af84?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:491 +0x4c
+gopurs/output/gopurs_runtime.Apply({0x102ccd697, 0x5, 0x0}, {0x0?, 0x0?, 0x0?})
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/gopurs_runtime/runtime.go:449 +0x60
+main.main()
+	/Users/0x1/Documents/htdocs/gopurs-node-process/output/Test.Main/main/main.go:18 +0xb0

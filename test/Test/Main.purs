@@ -4,10 +4,11 @@ import Prelude
 
 import Effect (Effect)
 import Effect.Console (log)
-import Node.Process (getEnv, cwd, pid, version, execPath, platform)
-import Test.Assert (assert)
-import Data.Maybe (isJust)
+import Node.Process (getEnv, cwd, pid, version, execPath, platform, setEnv, unsetEnv, lookupEnv, argv, argv0)
+import Test.Assert (assert, assertEqual)
+import Data.Maybe (isJust, Maybe(..))
 import Foreign.Object as Object
+import Data.Array (length)
 
 main :: Effect Unit
 main = do
@@ -27,5 +28,20 @@ main = do
   assert $ exec /= ""
   
   assert $ isJust platform
+  
+  -- Test argv
+  args <- argv
+  assert $ (length args) >= 1
+  a0 <- argv0
+  assert $ a0 /= ""
+
+  -- Test env manipulation
+  setEnv "GOPURS_TEST_ENV" "hello"
+  val <- lookupEnv "GOPURS_TEST_ENV"
+  assertEqual { expected: Just "hello", actual: val }
+  
+  unsetEnv "GOPURS_TEST_ENV"
+  val2 <- lookupEnv "GOPURS_TEST_ENV"
+  assertEqual { expected: Nothing, actual: val2 }
   
   log "Tests passed 🎉"

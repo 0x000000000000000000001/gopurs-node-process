@@ -4,6 +4,8 @@ import (
 	"os"
 	"strings"
 	"runtime"
+	"unsafe"
+	"gopurs/output/gopurs_runtime"
 )
 
 func ExitImpl(code int64) interface{} {
@@ -19,15 +21,20 @@ func AbortImpl(_ interface{}) interface{} {
 	panic("Not implemented: abortImpl")
 }
 
-func Argv(_ interface{}) []string {
-	return os.Args
+func Argv(_ interface{}) interface{} {
+	arr := make([]gopurs_runtime.Value, len(os.Args))
+	for i, arg := range os.Args {
+		arr[i] = gopurs_runtime.Str(arg)
+	}
+	// Return the array directly as a Value
+	return gopurs_runtime.Value{Type: gopurs_runtime.TypeArray, UnsafePtr: unsafe.Pointer(&arr)}
 }
 
-func Argv0(_ interface{}) string {
+func Argv0(_ interface{}) interface{} {
 	if len(os.Args) > 0 {
-		return os.Args[0]
+		return gopurs_runtime.Str(os.Args[0])
 	}
-	return ""
+	return gopurs_runtime.Str("")
 }
 
 func ChannelRefImpl(_ interface{}) interface{} {
@@ -90,14 +97,14 @@ func UnsafeGetEnv(_ interface{}) interface{} {
 }
 
 func SetEnvImpl(keyVal interface{}, valVal interface{}) interface{} {
-	key := keyVal.(string)
-	val := valVal.(string)
+	key := gopurs_runtime.Unbox[string](keyVal)
+	val := gopurs_runtime.Unbox[string](valVal)
 	os.Setenv(key, val)
 	return nil
 }
 
 func UnsetEnvImpl(keyVal interface{}) interface{} {
-	key := keyVal.(string)
+	key := gopurs_runtime.Unbox[string](keyVal)
 	os.Unsetenv(key)
 	return nil
 }
