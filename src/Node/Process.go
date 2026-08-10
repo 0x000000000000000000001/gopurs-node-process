@@ -5,8 +5,12 @@ import (
 	"strings"
 	"runtime"
 	"unsafe"
+	"time"
 	"gopurs/output/gopurs_runtime"
 )
+
+var startTime = time.Now()
+var exitCode int64 = 0
 
 func ExitImpl(code int64) interface{} {
 	os.Exit(int(code))
@@ -26,7 +30,6 @@ func Argv(_ interface{}) interface{} {
 	for i, arg := range os.Args {
 		arr[i] = gopurs_runtime.Str(arg)
 	}
-	// Return the array directly as a Value
 	return gopurs_runtime.Value{Type: gopurs_runtime.TypeArray, UnsafePtr: unsafe.Pointer(&arr)}
 }
 
@@ -45,8 +48,13 @@ func ChannelUnrefImpl(_ interface{}) interface{} {
 	panic("Not implemented: channelUnrefImpl")
 }
 
-func ChdirImpl(_ interface{}) interface{} {
-	panic("Not implemented: chdirImpl")
+func ChdirImpl(dirVal interface{}) interface{} {
+	dir := gopurs_runtime.Unbox[string](dirVal)
+	err := os.Chdir(dir)
+	if err != nil {
+		panic(err)
+	}
+	return nil
 }
 
 func Config(_ interface{}) interface{} {
@@ -122,38 +130,46 @@ func ExecPath(_ interface{}) string {
 }
 
 func Exit(_ interface{}) interface{} {
-	panic("Not implemented: exit")
+	os.Exit(int(exitCode))
+	return nil
 }
 
-func SetExitCodeImpl(_ interface{}) interface{} {
-	panic("Not implemented: setExitCodeImpl")
+func SetExitCodeImpl(codeVal interface{}) interface{} {
+	code := gopurs_runtime.Unbox[int64](codeVal)
+	exitCode = code
+	return nil
 }
 
 func GetExitCodeImpl(_ interface{}) interface{} {
-	panic("Not implemented: getExitCodeImpl")
+	return exitCode
 }
 
 func GetGidImpl(_ interface{}) interface{} {
-	panic("Not implemented: getGidImpl")
+	return int64(os.Getgid())
 }
 
 func GetUidImpl(_ interface{}) interface{} {
-	panic("Not implemented: getUidImpl")
+	return int64(os.Getuid())
 }
 
 func HasUncaughtExceptionCaptureCallback(_ interface{}) interface{} {
 	panic("Not implemented: hasUncaughtExceptionCaptureCallback")
 }
 
-func KillImpl(_ interface{}) interface{} {
-	panic("Not implemented: killImpl")
+func KillImpl(pidVal interface{}) interface{} {
+	pid := int(gopurs_runtime.Unbox[int64](pidVal))
+	p, err := os.FindProcess(pid)
+	if err == nil {
+		p.Kill()
+	}
+	return nil
 }
 
-func KillStrImpl(_ interface{}, _ interface{}) interface{} {
+func KillStrImpl(pidVal interface{}, sigVal interface{}) interface{} {
 	panic("Not implemented: killStrImpl")
 }
 
-func KillIntImpl(_ interface{}, _ interface{}) interface{} {
+func KillIntImpl(pidVal interface{}, sigVal interface{}) interface{} {
 	panic("Not implemented: killIntImpl")
 }
 
@@ -178,7 +194,7 @@ var Pid = int64(os.Getpid())
 var PlatformStr = runtime.GOOS
 
 func Ppid(_ interface{}) interface{} {
-	panic("Not implemented: ppid")
+	return int64(os.Getppid())
 }
 
 func ResourceUsage(_ interface{}) interface{} {
@@ -209,6 +225,14 @@ func ClearUncaughtExceptionCaptureCallback(_ interface{}) interface{} {
 	panic("Not implemented: clearUncaughtExceptionCaptureCallback")
 }
 
+func isTTY(f *os.File) bool {
+	stat, err := f.Stat()
+	if err != nil {
+		return false
+	}
+	return (stat.Mode() & os.ModeCharDevice) != 0
+}
+
 func Stdin(_ interface{}) interface{} {
 	panic("Not implemented: stdin")
 }
@@ -222,27 +246,30 @@ func Stderr(_ interface{}) interface{} {
 }
 
 func StdinIsTTY(_ interface{}) interface{} {
-	panic("Not implemented: stdinIsTTY")
+	return isTTY(os.Stdin)
 }
 
 func StdoutIsTTY(_ interface{}) interface{} {
-	panic("Not implemented: stdoutIsTTY")
+	return isTTY(os.Stdout)
 }
 
 func StderrIsTTY(_ interface{}) interface{} {
-	panic("Not implemented: stderrIsTTY")
+	return isTTY(os.Stderr)
 }
 
 func GetTitle(_ interface{}) interface{} {
-	panic("Not implemented: getTitle")
+	if len(os.Args) > 0 {
+		return os.Args[0]
+	}
+	return ""
 }
 
 func SetTitleImpl(_ interface{}) interface{} {
-	panic("Not implemented: setTitleImpl")
+	return nil
 }
 
 func Uptime(_ interface{}) interface{} {
-	panic("Not implemented: uptime")
+	return time.Since(startTime).Seconds()
 }
 
 var Version = runtime.Version()

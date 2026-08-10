@@ -4,7 +4,7 @@ import Prelude
 
 import Effect (Effect)
 import Effect.Console (log)
-import Node.Process (getEnv, cwd, pid, version, execPath, platform, setEnv, unsetEnv, lookupEnv, argv, argv0)
+import Node.Process (getEnv, cwd, pid, version, execPath, platform, setEnv, unsetEnv, lookupEnv, argv, argv0, uptime, ppid, setExitCode, getExitCode, stdinIsTTY)
 import Test.Assert (assert, assertEqual)
 import Data.Maybe (isJust, Maybe(..))
 import Foreign.Object as Object
@@ -34,6 +34,21 @@ main = do
   assert $ (length args) >= 1
   a0 <- argv0
   assert $ a0 /= ""
+
+  -- Test new OS bindings
+  up <- uptime
+  assert $ up >= 0.0
+
+  -- Test ppid
+  let _ = ppid
+  
+  -- Test exit code
+  setExitCode 0
+  ec <- getExitCode
+  assertEqual { expected: Just 0, actual: ec }
+
+  -- Test TTY
+  let _ = stdinIsTTY
 
   -- Test env manipulation
   setEnv "GOPURS_TEST_ENV" "hello"
