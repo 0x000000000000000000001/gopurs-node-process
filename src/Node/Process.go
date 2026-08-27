@@ -101,7 +101,7 @@ func GetEnv(_ interface{}) interface{} {
 }
 
 func UnsafeGetEnv(_ interface{}) interface{} {
-	return GetEnv(nil)
+	return Node_Process_GetEnv(nil)
 }
 
 func SetEnvImpl(keyVal interface{}, valVal interface{}) interface{} {
